@@ -50,7 +50,7 @@ func TimeRemaining() string {
 	if Future() {
 		x := time.Until(concertTime)
 		d, h, m, s := timeToDate(int64(x.Seconds()))
-		return fmt.Sprintf("[ %d days, %d hours, %d minutes, %d seconds ]", d, h, m, s)
+		return fmt.Sprintf("%d days, %d hours, %d minutes, %d seconds", d, h, m, s)
 	} else {
 		return fmt.Sprint("The concert was awesome!")
 	}

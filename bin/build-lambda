@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e -x
-
 echo "Creating release dir..."
 mkdir -p release
 mkdir -p out
@@ -9,3 +7,6 @@ mkdir -p out
 # Linux Release
 GOOS=linux GOARCH=amd64 go build -o "out/aws-lambda" lambdaToTaylor/main.go
 zip "release/aws-lambda.zip" "out/aws-lambda"
+
+echo ""
+echo "AWS Lambda Handler Info: 'out/aws-lambda'"

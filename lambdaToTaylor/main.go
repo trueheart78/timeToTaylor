@@ -6,7 +6,7 @@ import (
 )
 
 type Request struct {
-	Location int `json:"location"`
+	Location string `json:"location"`
 }
 
 type TimeToShow struct {
@@ -14,12 +14,10 @@ type TimeToShow struct {
 	TimeToShow string `json:"time_to_show"`
 }
 
-func Handler(request Request) (TimeToShow, error) {
-	tts := TimeToShow{taylorTime.Banner(), taylorTime.TimeRemaining()}
-
-	return tts, nil
+func HandleLambdaEvent(event Request) (TimeToShow, error) {
+	return TimeToShow{Showtime: taylorTime.Banner(), TimeToShow: taylorTime.TimeRemaining()}, nil
 }
 
 func main() {
-	lambda.Start(Handler)
+	lambda.Start(HandleLambdaEvent)
 }
