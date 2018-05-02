@@ -21,7 +21,7 @@ Taylor Swift is in Columbus, Ohio on Saturday, July 7th, 2018 at 7pm
 
 ## AWS Lambda
 
-Generate a reaady-made AWS Lambda archive.
+Generate a ready-made AWS Lambda archive.
 
 ```
 $ bin/build-lambda
