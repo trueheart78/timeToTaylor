@@ -53,9 +53,9 @@ createRelease() {
 
 	if [ "$arm" ]
 	then
-		GOOS=$os GOARCH=$arch GOARM=$arm go build -ldflags "$ldflags" -o "out/$binname" main.go
+		GOOS=$os GOARCH=$arch GOARM=$arm go build -ldflags "$ldflags" -o "out/$binname" timeToTaylor/main.go
 	else
-		GOOS=$os GOARCH=$arch go build -ldflags "$ldflags" -o "out/$binname" main.go
+		GOOS=$os GOARCH=$arch go build -ldflags "$ldflags" -o "out/$binname" timeToTaylor/main.go
 	fi
 
 	cd out
