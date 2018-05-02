@@ -33,15 +33,15 @@ func main() {
 	loc, _ := time.LoadLocation("UTC")
 
 	const longForm = "Jan 2, 2006 at 3:04pm (MST)"
-	concertTime, _ := time.ParseInLocation(longForm, "Jul 7, 2017 at 7:00pm (EDT)", loc)
+	concertTime, _ := time.ParseInLocation(longForm, "Jul 7, 2018 at 7:00pm (EDT)", loc)
 
-	fmt.Printf("Taylor Swift is in Columbus, Ohio on %v, %v %vth, %v at 7pm\n", concertTime.Weekday(), concertTime.Month(), concertTime.Day(), concertTime.Year())
+	fmt.Printf("Taylor Swift is in Columbus, Ohio on %v, %v %vth, %v at 7pm\n\n", concertTime.Weekday(), concertTime.Month(), concertTime.Day(), concertTime.Year())
 
 	if time.Now().Before(concertTime) {
 		x := time.Until(concertTime)
 		d, h, m, s := timeToDate(int64(x.Seconds()))
-		fmt.Printf("The time until the concert is in [%d days, %d hours, %d minutes, %d seconds]\n", d, h, m, s)
+		fmt.Printf("[ %d days, %d hours, %d minutes, %d seconds ]\n", d, h, m, s)
 	} else {
-		fmt.Println("The concert was awesome!")
+		fmt.Println("The concert was awesome!\n")
 	}
 }
