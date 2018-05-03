@@ -23,8 +23,7 @@ const minute = 60
 
 const longForm = "Jan 2, 2006 at 3:04pm (MST)"
 
-var loc, _ = time.LoadLocation("UTC")
-var concertTime, _ = time.ParseInLocation(longForm, "Jul 7, 2018 at 7:00pm (EDT)", loc)
+var concertTime, _ = time.Parse(longForm, "Jul 7, 2018 at 7:00pm (EDT)")
 
 func timeToDate(sec int64) (days, hours, minutes, seconds int64) {
 	seconds = sec
@@ -48,7 +47,7 @@ func Banner() string {
 
 func TimeRemaining() string {
 	if Future() {
-		x := time.Until(concertTime)
+		x := time.Until(concertTime.UTC())
 		d, h, m, s := timeToDate(int64(x.Seconds()))
 		return fmt.Sprintf("%d days, %d hours, %d minutes, %d seconds", d, h, m, s)
 	} else {

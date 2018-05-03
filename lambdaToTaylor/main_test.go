@@ -6,7 +6,7 @@ import (
 )
 
 func TestHandler(t *testing.T) {
-	tts, err := Handler(Request{
+	tts, err := HandleLambdaEvent(Request{
 		location: "CBUS",
 	})
 	assert.IsType(t, nil, err)
