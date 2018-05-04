@@ -23,7 +23,7 @@ const minute = 60
 
 const longForm = "Jan 2, 2006 at 3:04pm (MST)"
 
-var concertTime, _ = time.Parse(longForm, "Jul 7, 2018 at 7:00pm (EDT)")
+var concertTime, _ = time.Parse(longForm, "Jul 7, 2018 at 11:00pm (UTC)")
 
 func timeToDate(sec int64) (days, hours, minutes, seconds int64) {
 	seconds = sec
@@ -53,4 +53,12 @@ func TimeRemaining() string {
 	} else {
 		return fmt.Sprint("The concert was awesome!")
 	}
+}
+
+func ConcertTime() string {
+	return fmt.Sprintf("%v", concertTime.UTC())
+}
+
+func CurrentTime() string {
+	return fmt.Sprintf("%v", time.Now().UTC())
 }
