@@ -6,6 +6,12 @@ Waiting for a concert kinda stinks.
 
 Writing Go code that works with AWS Lambda makes it go faster.
 
+## Installing It
+
+Download the relevant file from the [releases list](https://github.com/trueheart78/timeToTaylor/releases) and extract it.
+
+Now you know!
+
 ## Locally
 
 Running it locally:
