@@ -12,7 +12,9 @@ Download the relevant file from the [releases list](https://github.com/trueheart
 
 Now you know!
 
-## Locally
+## Development
+
+### Locally
 
 Running it locally:
 
@@ -25,7 +27,7 @@ Taylor Swift is in Columbus, Ohio on Saturday, July 7th, 2018 at 7pm
 [ 66 days, 3 hours, 36 minutes, 43 seconds ]
 ```
 
-## AWS Lambda
+### AWS Lambda
 
 Generate a ready-made AWS Lambda archive.
 
