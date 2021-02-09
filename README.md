@@ -2,7 +2,7 @@
 
 Waiting for a concert kinda stinks.
 
-![bored - taylor swift.gif](https://dl.dropboxusercontent.com/s/spnflcr84vl993i/bored+-+taylor+swift.gif)
+![bored - taylor swift.gif][bored-taylor-swift]
 
 Writing Go code that works with AWS Lambda makes it go faster.
 
@@ -42,4 +42,8 @@ AWS Lambda Handler Info: 'out/aws-lambda'
 
 ## Profit
 
-![taylor - looks good.gif](https://dl.dropboxusercontent.com/s/emq30wgry1usuhs/taylor+-+looks+good.gif)
+![taylor - looks good.gif][looks-good-taylor-swift]
+
+
+[bored-taylor-swift]: assets/bored-taylor-swift.gif
+[looks-good-taylor-swift]: assets/looks-good-taylor-swift.gif
